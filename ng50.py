@@ -5,12 +5,7 @@ import argparse
 
 def run(path, NG, genome_length):
     contigs = read_fasta(path)
-    if NG == 50:
-        NG = 0.5
-    elif NG == 75:
-        NG = 0.75
-    elif NG == 25:
-        NG = 0.25
+    NG = NG/100
 
     length_per_contigs = {}
     for i, key in enumerate(contigs.keys()):

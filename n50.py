@@ -5,12 +5,7 @@ import argparse
 
 def run(path, N, min_length):
     contigs = read_fasta(path)
-    if N == 50:
-        N = 0.5
-    elif N == 75:
-        N = 0.75
-    elif N == 25:
-        N = 0.25
+    N = N / 100
 
     length_per_contigs = {}
     total_length = 0
