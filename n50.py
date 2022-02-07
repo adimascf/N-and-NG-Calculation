@@ -39,25 +39,25 @@ def main():
         description="Calculate N from fasta file of SPAdes contigs output"
     )
     parser.add_argument(
-        "-in",
+        "-in,",
         help="fasta input file (required)",
-        metavar="",
+        metavar="input",
         dest="input",
         type=str,
         required=True,
     )
     parser.add_argument(
-        "-N",
+        "-N,",
         help="Statistics calculation [25, 50, 75] (required)",
-        metavar="",
+        metavar="percentage",
         dest="statistics",
         type=int,
         required=True,
     )
     parser.add_argument(
-        "-min",
+        "-min,",
         help="Cut off the length with specified threshold",
-        metavar="",
+        metavar="min_length",
         dest="min_length",
         type=int,
         default=0,
@@ -73,4 +73,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -1,6 +1,3 @@
-from ast import arg
-from os import path
-from traceback import print_tb
 from utilities import read_fasta
 import re
 import argparse
@@ -37,26 +34,26 @@ def main():
         description="Calculate NG from fasta file of SPAdes contigs output"
     )
     parser.add_argument(
-        "-in",
+        "-in,",
         help="fasta input file (required)",
-        metavar="",
+        metavar="input",
         dest="input",
         type=str,
         required=True,
     )
     parser.add_argument(
-        "-N",
+        "-N,",
         help="Statistics calculation (required)",
-        metavar="",
+        metavar="percentage",
         dest="statistics",
         type=int,
         required=True,
     )
     parser.add_argument(
-        "-L",
+        "-L,",
         help="Length of the reference genome (required)",
         dest="length",
-        metavar="",
+        metavar="length",
         type=int,
         required="TRUE",
     )
